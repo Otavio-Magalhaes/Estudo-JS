@@ -1,0 +1,3 @@
+module.exports = 'nome do arquivo que vai ser exportado'
+
+for… of -> laço de repetição, devo pesquisar.

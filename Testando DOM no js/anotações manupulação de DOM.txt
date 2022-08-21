@@ -1,0 +1,132 @@
+DOM - Documen Object Model
+
+document.url - retorna o local onde esta a pagina html
+document.title - retorna o titulo da pagina html
+
+entao o document é referente a pagina html, e seu codigo em si
+
+entretanto para buscar um ID ou uma Classe teremos que usar comando especificos
+
+id: 
+
+document.getElementById('nomeDoID')
+ou
+document.querySelector('#id')
+
+classe:
+
+document.getElementByClassName('nomeDaClasse')
+ou
+document.querySelector('NomeDaClasse')
+
+
+
+-------------------------------------------------------
+Propriedades e métodos para alterar elementos no HTML
+-------------------------------------------------------
+
+element.innerHTML -     Esta propriedade obtém ou altera 
+			qualquer elemento no HTML, inclusive tags.
+
+
+element.innerText - 	Esta propriedade permite inserir textos no HTML.
+
+element.attribute - 	Esta propriedade altera o valor de um elemento HTML
+
+element.setAttribute-   Este método altera o valor de um atributo de um elemento HTML.
+(atributo, valor) 
+
+
+-------------------------------------------------------
+Adicionando e excluindo elementos
+-------------------------------------------------------
+
+
+document.write() - 		Escreve no fluxo de saída do HTML.
+
+document.appendChild() - 	Adiciona um elemento HTML.
+
+document.removeChild() - 	Remove um elemento HTML.
+
+document.replaceChild() - 	Substitui um elemento HTML.
+
+document.createElement() - 	Cria um elemento HTML.
+
+
+-------------------------------------------------------
+Métodos para selecionar elementos no HTML
+-------------------------------------------------------
+
+document.getElementByID(id) - 		Selecionar um elemento pelo ID.
+document.getElementsByTagName(name) - 	Selecionar um elemento pelo nome.
+document.getElementsByClassName(name) - Selecionar um elemento pelo nome da classe.
+
+
+-------------------------------------------------------
+Criando um evento de click
+-------------------------------------------------------
+.addEventListener - cria um evento que precisa ser especificado de qual tipo é.
+
+no caso abaixo é o de click
+/*
+robotron.addEventListener("click", () => {
+    console.log('ola')
+}
+*/
+
+ele criaria um evento de click, e toda vez que o click fosse feito, o console retornaria ola.
+
+
+
+--------------------------------------------------
+arrays - ler depois que finalizar o curso
+--------------------------------------------------
+
+https://www.alura.com.br/artigos/javascript-para-que-serve-array
+
+
+
+
+----------------------------------------
+Manipulação de array
+----------------------------------------
+
+removendo o nome vermelho do array: 
+
+let lista = ["Laranja", "Vermelho", "Branco", "Amarelo", "Rosa"]; 
+
+lista.splice(1,1) -  o primeiro parâmetro a ser
+					 informado é a posição do item a ser removido, e o segundo parâmetro informa quantos itens serão removidos a partir de sua posição.
+
+
+console.log(lista)
+
+
+---------------------------
+parentNode - Busca o pai do elemento que foi clicado
+
+dataset - Procurar
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------
+solução exercicio
+---------------------------------------------------------
+const tintas = document.querySelector('[data-tintas]');
+const lista = document.querySelector('.lista');
+
+tintas.addEventListener("click", (evento) =>{
+    if(lista.style.visibility === "hidden"){
+        lista.style.visibility = "visible";
+    }
+    else{
+        lista.style.visibility = "hidden"
+    }
+})

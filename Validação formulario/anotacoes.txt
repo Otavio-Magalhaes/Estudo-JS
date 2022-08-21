@@ -1,0 +1,45 @@
+  setCustomValidity() - Serve para fazer com que o input tenha faça a validação e passe algo de retorno(uma mensagem)
+
+			 input.setCustomValidity(parametro-mensagem)   -       	obs: o parametro é a variavel mensagem, a qual a gente cria antes, passando um valor vazio e dps anexa a mensagem de erro.
+
+
+input.dataset.tipo -> .dataset = Serve para acessar os data atributs de um input ou algum elemento. e depois selecionar qual tipo queremos selecionar   no caso da aula era .tipo
+
+
+
+
+
+
+
+
+                                                PESQUISAR
+
+data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate()
+
+input.validity - 
+
+addEventListener - 
+
+
+target - 
+
+innerHTML -muda o html
+
+charAt() - 
+
+
+fetch - 
+
+
+Mascaras - CPF, CEP, Preço, etc...
+
+json
+
+
+
+
+--------
+
+validação com html ( Required, type:email, na senha usamos pattern e title com a mensagem do erro)
+
+javscript(data-atribute(tipo), cpf(com formato valido), cep(consumo de api), Preço(mascara monetaria, pegando do git-hub) )

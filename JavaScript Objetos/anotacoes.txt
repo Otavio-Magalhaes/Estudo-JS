@@ -1,0 +1,128 @@
+Para criar um clone de um Objeto é necessario usar 
+
+cont objetoPrincipal = Object.create(objetoClone);
+
+assim cria um clone do primeiro objeto, caso faça de outra maneira, apenas
+se cria uma instancia do objeto principal, deste modo podendo alterar o objeto 
+principal, utilizando o objeto secundario, ex:
+
+	const objPrincipal= {
+ 	 nome: "Gandalf",
+ 	 classe: "mago",
+ 	 nivel: "20"
+	}
+
+objSecundario = objPrincipal.
+
+objSecundario.nome = "Frodo".
+
+assim eu mudei tanto o nome do objeto principal quanto do secundario, se eu
+der um:
+
+console.log(objPrincipal.nome) -> A saida é Frodo, do mesmo modo que
+console.log(objSecundario.nome) -> A saida também é Frodo
+
+
+---
+
+for( let info in 'objeto'){
+	// cria a variavel info e verifica dentro do objeto quais são 	
+	as chaves existentes dentro dele
+}
+
+
+----
+
+
+Object.keys('nome do objeto') - Verifica as chaves existentes dentro do objeto e as colocas em um array;
+
+Object.values('nome do objeto') - Retorna um array	com os valores salvos dentro das chaves.
+
+Object.entries('nome do objeto') -> Retorna varios arrays correspondente a chave e valor. ex: ["nome:", otavio]
+			 ["idade:", 24]
+			 ["cpf:", 13995497748]
+
+			 
+
+
+.include("string") -> verifica se o que esta dentro das aspas existe dentro da
+variavel, ou array. 
+
+
+---------
+
+				JSON
+JSON significa (JavaScript Object Notion) ou (notação de objeto em JavaScript)
+
+
+JSON é um formato criado para transferencia de dados, sendo assim é necessario converte-lo para um objeto JavaScript para utilza-lo em um programa;
+
+JSON.parse() -> converte o Json para um objeto JavaScript;
+JSON.stringfy() -> converte um objeto JavaScript para o formato JSON
+
+
+---------
+
+Cliente.call() - > importa o construtor de outro objeto, dentro dos() é colocado os parametros que você deseja importar, caso vc queria importar algum parametro que foi criado com o this voce tem q importar o this também,
+
+O primeiro parametro é sempre referente ao this(a quem ele vai ser referido, a variavel em questao.)
+
+exp:
+
+cliente.call(this, nome, cpf, email, saldo)
+
+desse modo vc pega o formato completo que foi criado usando o this.nome, this.cpf, etc..
+
+------------
+
+Objetos criados de forma literal (const obj = {a: 1}) utilizam Object.prototype como protótipo; objetos criados com new a partir de um construtor herdam a propriedade prototype de sua função construtora; Objetos criados com Object.create()recebem como prototype o primeiro parâmetro da função - que pode ser null.
+
+-----------
+
+Herança é um mecanismo que permite que uma classe definida herde caracteristicas e comportamentos de outra classe base.
+
+permite trabalhar com reaproveitamento de código.
+
+ex:
+extends -> palabra reservada que significa Herança, herda todas as varacteristicas de outra classe q foi dada como base.
+
+super - > chama da classe base todos os parametros
+
+
+um objeto  é uma instancia de classe em memoria.
+
+
+------
+apply()
+O método apply() funciona de forma muito semelhante ao call(), porém recebe os argumentos em um array ao invés de separados:
+
+ex: 
+
+function imprimeNomeEmail(tipoCliente, agencia){
+    console.log(`
+      ${tipoCliente} da agência ${agencia}:
+      - nome: ${this.nome}, email: ${this.email}
+      `)
+   }
+   
+   const cliente1 = {
+    nome: "Carlos",
+    email: "c@email.com"
+   }
+   
+   const cliente2 = {
+    nome: "Fred",
+    email: "f@email.com"
+   }
+
+   const clienteEspecial = ["Cliente especial", "Rio de Janeiro"]
+   const clienteEstudante = ["Cliente estudante", "Fortaleza"]
+
+   imprimeNomeEmail.apply(cliente1, clienteEspecial)
+   imprimeNomeEmail.apply(cliente2, clienteEstudante)
+
+
+   -----
+
+
+   Utilize o método apply() caso você tenha um array de dados e o call() para passar valores individuais como parâmetro. Lembre-se que o array deve seguir a ordem correta dos parâmetros informado na função.
